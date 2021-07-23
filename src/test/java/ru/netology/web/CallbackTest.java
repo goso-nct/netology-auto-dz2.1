@@ -25,7 +25,7 @@ class CallbackTest {
         if (IS_WINDOWS)
             driverPath = "driver/windows/chromedriver.exe";
         if (IS_LINUX)
-            driverPath = "./driver/linux/chromedriver";
+            driverPath = "driver/linux/chromedriver";
     }
 
 //    @Test
