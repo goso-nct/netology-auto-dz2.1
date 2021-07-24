@@ -82,7 +82,7 @@ class CallbackTest {
         element = form.findElement(By.cssSelector("[data-test-id=name]"));
         boolean b = element.getAttribute("class").contains("input_invalid");
         assertTrue(b);
-        element = form.findElement(By.xpath("//*[@id=\"root\"]/div/form/div[1]/span/span/span[3]"));
+        element = form.findElement(By.cssSelector("[data-test-id=name] span.input__sub"));
         assertTrue(element.getText().equals("Поле обязательно для заполнения"));
     }
 
@@ -94,7 +94,7 @@ class CallbackTest {
         element = form.findElement(By.cssSelector("[data-test-id=phone]"));
         boolean b = element.getAttribute("class").contains("input_invalid");
         assertTrue(b);
-        element = form.findElement(By.xpath("//*[@id=\"root\"]/div/form/div[2]/span/span/span[3]"));
+        element = form.findElement(By.cssSelector("[data-test-id=phone] span.input__sub"));
         assertTrue(element.getText().equals("Поле обязательно для заполнения"));
     }
 
@@ -106,7 +106,7 @@ class CallbackTest {
         element = form.findElement(By.cssSelector("[data-test-id=name]"));
         boolean b = element.getAttribute("class").contains("input_invalid");
         assertTrue(b);
-        element = form.findElement(By.xpath("//*[@id=\"root\"]/div/form/div[1]/span/span/span[3]"));
+        element = form.findElement(By.cssSelector("[data-test-id=name] span.input__sub"));
         assertTrue(element.getText().equals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
     }
 
@@ -119,7 +119,7 @@ class CallbackTest {
         element = form.findElement(By.cssSelector("[data-test-id=phone]"));
         boolean b = element.getAttribute("class").contains("input_invalid");
         assertTrue(b);
-        element = form.findElement(By.xpath("//*[@id=\"root\"]/div/form/div[2]/span/span/span[3]"));
+        element = form.findElement(By.cssSelector("[data-test-id=phone] span.input__sub"));
         assertTrue(element.getText().equals("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
     }
 
